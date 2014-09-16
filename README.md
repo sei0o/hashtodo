@@ -8,15 +8,16 @@ very simple todo
 example:
 ```
 text #hashtag
+\#hashtag text
 ```
 
 ### Export
 ```
 $ ./hashtodo.rb export <todo> <template> <target>
 ```
-<template> is a erb file.
 
 ### Template
+template is a __erb__ file.
 ```
 <ul>
 	<% tasks.each do |task| %>
