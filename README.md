@@ -7,8 +7,8 @@ very simple todo
 ### Todo file
 example:
 ```
-text #hashtag
-\#hashtag text
+ text #hashtag
+ #hashtag text
 ```
 
 ### Export
