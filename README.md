@@ -3,6 +3,12 @@ HashTodo
 
 very simple todo
 
+## Install
+```
+$ gem install commander
+```
+That is all.
+
 ## How to Use
 ### Todo file
 example:
@@ -13,7 +19,7 @@ example:
 
 ### Export
 ```
-$ ./hashtodo.rb export <todo> <template> <target>
+$ ./hashtodo.rb export -d <todo> -e <template> -t <target>
 ```
 
 ### Template

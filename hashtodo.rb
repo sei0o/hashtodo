@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
+require 'yaml'
 require 'erb'
-require 'thor'
+require 'commander'
 
 class Task
 	attr_accessor :text, :hashtags
@@ -47,14 +48,10 @@ class Exporter
 	end
 end
 
-class CLI < Thor
-	desc "export <todo> <template> <file>", "<todo>の中身をerbの<template>によって<file>にエクスポートします"
-	def export todofile, erb, target
-		parsed = Parser.parse todofile
-		Exporter.export parsed, erb, target
-	end
-	
-	# taskのCRUDとか?
-end
+params = Commander.parse ARGV
 
-CLI.start ARGV
+case params[:key]
+when "export"
+	data = Parser.parse params[:d]
+	Exporter.export data, params[:e] , params[:t]
+end
