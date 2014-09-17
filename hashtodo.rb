@@ -1,8 +1,6 @@
-#!/usr/bin/env ruby
-
 require 'yaml'
 require 'erb'
-require 'commander'
+require 'clier'
 
 class Task
 	attr_accessor :text, :hashtags
@@ -48,7 +46,7 @@ class Exporter
 	end
 end
 
-params = Commander.parse ARGV
+params = Clier.parse ARGV
 
 case params[:key]
 when "export"

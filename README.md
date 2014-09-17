@@ -5,7 +5,7 @@ very simple todo
 
 ## Install
 ```
-$ gem install commander
+$ gem install clier
 ```
 That is all.
 
