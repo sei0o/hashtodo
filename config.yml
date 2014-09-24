@@ -1,0 +1,3 @@
+data: data.dat
+erb: result.erb
+target: result.html
